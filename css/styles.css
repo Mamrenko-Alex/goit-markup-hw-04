@@ -1,0 +1,378 @@
+/* ========== VAR ========== */
+:root {
+  --primary-color: #4d5ae5;
+  --pressed-color: #404bbf;
+  --dark-color: #2e2f42;
+  --primary-text-color: #434455;
+  --subtle-text-color: #8e8f99;
+  --white: #ffffff;
+  --accent-color: #e7e9fc;
+  --light-background-color: #f4f4fd;
+  --primary-font: 'Roboto', sans-serif;
+  --width-big-card: calc((100% - 48px) / 3);
+  --width-small-card: calc((100% - 72px) / 4);
+}
+/* ========== /VAR ========== */
+
+/* ========== COMMON ========== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: var(--primary-text-color);
+  background-color: var(--white);
+}
+
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container .list {
+  display: flex;
+  gap: 24px;
+}
+
+.visually-hidden,
+.section-header.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.team {
+  background-color: var(--light-background-color);
+}
+
+.hero {
+  background-color: var(--dark-color);
+  padding: 188px 0;
+}
+/* ========== /COMMON ========== */
+
+/* ========== NAVIGATION ========== */
+.site-nav {
+  font-weight: 500;
+  align-items: center;
+}
+
+.link-to {
+  color: var(--dark-color);
+  padding: 24px 0;
+}
+
+.link-to:hover,
+.link-to:focus {
+  color: var(--pressed-color);
+}
+
+/* 
+Поки видаляюю, бо з ним не проходять тести
+#active-page {
+  color: var(--primary-color);
+} */
+/* ========== /NAVIGATION ========== */
+
+/* ========== LOGO ========== */
+.site-logo {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: 0.034em;
+  text-transform: uppercase;
+  margin-right: 76px;
+}
+
+.second-color-header {
+  color: var(--dark-color);
+}
+
+.second-color-footer {
+  color: var(--light-background-color);
+}
+/* ========== /LOGO ========== */
+
+/* ========== ADDRESS ========== */
+.company-contacts {
+  font-style: normal;
+}
+
+.contact:hover,
+.contact:focus {
+  color: var(--pressed-color);
+}
+
+.contact {
+  color: var(--primary-text-color);
+}
+
+.contact:hover,
+.contact:focus {
+  color: var(--pressed-color);
+}
+/* ========== /ADDRESS ========== */
+
+/* ========== HEADERS ========== */
+.display-header {
+  color: var(--white);
+  text-align: center;
+  max-width: 496px;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+}
+
+.section-header {
+  color: var(--dark-color);
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.045em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.benefit-header,
+.teammate-name,
+.project-name {
+  color: var(--dark-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+  margin-bottom: 8px;
+}
+/* ========== /HEADERS ========== */
+
+/* ========== BUTTONS ========== */
+button {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.cta-button {
+  /* Button Frame */
+  min-width: 169px;
+  display: block;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  /* Button Text */
+  color: var(--white);
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: var(--pressed-color);
+}
+
+.filter-button {
+  /* Button Frame */
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--accent-color);
+  background-color: var(--light-background-color);
+  /* Button Text */
+  color: var(--primary-color);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  border: none;
+  color: var(--white);
+  background-color: var(--pressed-color);
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+/* ========== /BUTTONS ========== */
+
+/* ========== CARDS ========== */
+.teammate {
+  width: var(--width-small-card);
+  background-color: var(--white);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.list .project {
+  background: var(--white);
+  width: var(--width-big-card);
+}
+
+.card-doing {
+  width: var(--width-big-card);
+}
+
+.project-category {
+  color: var(--primary-text-color);
+}
+
+.card-benefit {
+  width: var(--width-small-card);
+}
+/* ========== /CARDS ========== */
+
+/* ========== HEADER ========== */
+.site-header {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav,
+.list.pages,
+.list.contacts {
+  display: flex;
+  gap: 40px;
+}
+
+.site-nav .link,
+.link-to {
+  display: block;
+}
+
+.list.contacts {
+  padding: 24px 0;
+}
+
+/* ========== /HEADER ========== */
+
+/* ========== HERO ========== */
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+/* ========== /HERO ========== */
+
+/* ========== BENEFITS ========== */
+.benefits {
+  padding: 120px 0;
+}
+/* ========== /BENEFITS ========== */
+
+/* ========== SERVICES ========== */
+.our-doing {
+  padding-bottom: 120px;
+}
+
+.what-do {
+  display: flex;
+}
+/* ========== /SERVICES ========== */
+
+/* ========== TEAM ========== */
+.team {
+  padding: 120px 0;
+}
+
+.team-list {
+  display: flex;
+}
+
+.name-position {
+  padding: 32px 0;
+  text-align: center;
+}
+/* ========== /TEAM ========== */
+
+/* ========== PORTFOLIO ========== */
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  margin-bottom: 72px;
+  justify-content: center;
+}
+
+.list.projects {
+  flex-wrap: wrap;
+  row-gap: 48px;
+}
+
+.name-and-category {
+  padding: 32px 16px;
+  border: 1px solid var(--accent-color);
+  border-top: none;
+}
+/* ========== /PORTFOLIO ========== */
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background-color: var(--dark-color);
+  padding: 100px 0;
+}
+
+.footer-slogan {
+  color: var(--light-background-color);
+  max-width: 264px;
+}
+
+.site-footer .container {
+  align-items: flex-start;
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+/* ========== /FOOTER ========== */
