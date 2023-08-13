@@ -543,10 +543,8 @@ button {
   margin-bottom: 16px;
 }
 
-.footer-socials-list {
+.list.footer-socials-list {
   display: flex;
-  align-items: center;
-  justify-content: start;
   gap: 16px;
 }
 
