@@ -239,7 +239,6 @@ button {
 }
 
 .list .project {
-  display: block;
   background: var(--white);
   width: var(--width-big-card);
 }
@@ -291,12 +290,12 @@ button {
 .link-to {
   display: block;
   position: relative;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list.contacts {
   padding: 24px 0;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -477,6 +476,7 @@ button {
 }
 
 .portfolio-link {
+  display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -516,7 +516,7 @@ button {
   padding: 100px 0;
 }
 
-.site-footer .container {
+.footer-container {
   display: flex;
   align-items: baseline;
 }
@@ -533,7 +533,7 @@ button {
 }
 
 .our-social {
-  color: var(--light-background-color);
+  color: var(--white);
   font-weight: 500;
   margin-bottom: 16px;
 }
