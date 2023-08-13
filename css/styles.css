@@ -194,7 +194,7 @@ button {
   gap: 10px;
   margin: 0 auto;
   background-color: var(--primary-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Button Text */
   color: var(--white);
 }
@@ -239,6 +239,7 @@ button {
 }
 
 .list .project {
+  display: block;
   background: var(--white);
   width: var(--width-big-card);
 }
@@ -270,6 +271,8 @@ button {
 /* ========== HEADER ========== */
 .site-header {
   border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .site-header .container {
@@ -288,10 +291,12 @@ button {
 .link-to {
   display: block;
   position: relative;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list.contacts {
   padding: 24px 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -307,6 +312,7 @@ button {
   width: 100%;
   height: 4px;
   border-radius: 2px;
+  bottom: -1px;
 }
 
 .link-to.current::after {
@@ -366,6 +372,11 @@ button {
   display: flex;
 }
 
+.teammate {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .name-position {
   padding: 32px 0;
   text-align: center;
@@ -392,6 +403,7 @@ button {
   flex-shrink: 0;
   fill: var(--light-background-color);
   background-color: var(--primary-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .teammate-link:hover,
@@ -418,16 +430,21 @@ button {
   height: 88px;
   flex-shrink: 0;
   border-radius: 4px;
+  color: var(--subtle-text-color);
   border: 1px solid var(--subtle-text-color);
-  fill: var(--subtle-text-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-link:hover,
 .customer-link:focus {
-  fill: var(--primary-color);
-  border: 1px solid var(--primary-colorfooter-slogan);
+  color: var(--pressed-color);
+  border-color: var(--pressed-color);
 }
 
+.customer-icons {
+  fill: currentColor;
+}
 /* ========== /CUSTOMERS ========== */
 
 /* ========== PORTFOLIO ========== */
@@ -501,21 +518,23 @@ button {
 
 .site-footer .container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
 }
 
 .footer-content-container,
 .footer-social-container {
   display: block;
+  margin-right: 120px;
 }
 
 .footer-slogan {
-  color: var(--light-background-color);
+  color: var(--white);
   max-width: 264px;
 }
 
 .our-social {
   color: var(--light-background-color);
+  font-weight: 500;
   margin-bottom: 16px;
 }
 
@@ -528,7 +547,7 @@ button {
   margin-bottom: 16px;
 }
 
-.footer-social-list {
+.footer-socials-list {
   display: flex;
   gap: 16px;
 }
@@ -543,6 +562,7 @@ button {
   flex-shrink: 0;
   fill: var(--light-background-color);
   background-color: var(--primary-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-link:hover,
@@ -613,6 +633,6 @@ button {
 
 .modal-window-close-button:hover .modal-window-close-button-image,
 .modal-window-close-button:focus .modal-window-close-button-image {
-  fill: #ffffff;
+  fill: var(--white);
 }
 /* ========== /MODAL WINDOW ========== */
